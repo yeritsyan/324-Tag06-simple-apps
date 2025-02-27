@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: frontend-react
+    runtime: static
+    repo: https://github.com/yeritsyan/324-Tag06-simple-apps
+    buildCommand: npm run build
+    staticPublishPath: dist
+    rootDir: frontend
+  - type: web
+    name: backend-nestjs
+    env: docker
+    repo: https://github.com/yeritsyan/324-Tag06-simple-apps
+    plan: free
+    region: frankfurt
+    dockerfilePath: backend/Dockerfile
+    rootDir: backend
+version: "1"
