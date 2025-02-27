@@ -6,7 +6,7 @@ export class DataController {
   getData() {
     const currentDate = new Date().toISOString(); // Get current date-time in ISO format
     return {
-      message: 'This is your data!',
+      message: 'This is your data from NestJS-App A!',
       timestamp: currentDate,
     };
   }
