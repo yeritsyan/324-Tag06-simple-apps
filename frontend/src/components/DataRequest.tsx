@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // Define the props interface for DataRequest component
 interface DataRequestProps {
   title: string;
-  apiUrl: string;
+  apiUrl: string | undefined;
 }
 
 const DataRequest: React.FC<DataRequestProps> = ({ title, apiUrl }) => {
@@ -14,6 +14,7 @@ const DataRequest: React.FC<DataRequestProps> = ({ title, apiUrl }) => {
   const fetchData = async () => {
     setLoading(true);
     try {
+        console.log(apiUrl + "/data")
       const response = await fetch(apiUrl + "/data");
       const data = await response.json();
       setResponseData(JSON.stringify(data, null, 2)); // Pretty print JSON

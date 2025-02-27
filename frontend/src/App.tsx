@@ -4,7 +4,7 @@ import DataRequest from './components/DataRequest'
 
 
 const App = () => {
-  const apiUrl = process.env.BACKEND_URL || "not-defined-url";
+  const apiUrl = process.env.BACKEND_URL;
 
   return (
     <>
