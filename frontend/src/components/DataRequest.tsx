@@ -25,7 +25,7 @@ const DataRequest: React.FC<DataRequestProps> = ({ title, apiUrl }) => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "20px auto", textAlign: "center" }}>
+    <div style={{ maxWidth: "600px", margin: "20px auto", textAlign: "center" }}>
       <h3>Data Request Component {title}</h3>
       <button onClick={fetchData} disabled={loading} style={{ padding: "10px", cursor: "pointer" }}>
         {loading ? "Loading..." : "Fetch Data"}
