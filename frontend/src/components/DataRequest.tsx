@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 // Define the props interface for DataRequest component
 interface DataRequestProps {
+  title: string;
   apiUrl: string;
 }
 
-const DataRequest: React.FC<DataRequestProps> = ({ apiUrl }) => {
+const DataRequest: React.FC<DataRequestProps> = ({ title, apiUrl }) => {
   const [responseData, setResponseData] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -25,7 +26,7 @@ const DataRequest: React.FC<DataRequestProps> = ({ apiUrl }) => {
 
   return (
     <div style={{ maxWidth: "400px", margin: "20px auto", textAlign: "center" }}>
-      <h3>Data Request Component</h3>
+      <h3>Data Request Component {title}</h3>
       <button onClick={fetchData} disabled={loading} style={{ padding: "10px", cursor: "pointer" }}>
         {loading ? "Loading..." : "Fetch Data"}
       </button>
