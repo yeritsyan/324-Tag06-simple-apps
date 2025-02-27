@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <h2>Functional Arror Component</h2>
-      <DataRequest title="API Endpoint A" apiUrl="https://backend-nestjs-o9er.onrender.com/dev"/>
+      <DataRequest title="API Endpoint A" apiUrl="https://backend-nestjs-o9er.onrender.com/data"/>
     </>
   )
 }
