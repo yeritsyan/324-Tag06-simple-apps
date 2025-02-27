@@ -8,7 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['https://frontend-react-auo0.onrender.com/'], // Allow specific domains
+    origin: '*', // Allow domains
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only certain HTTP methods
   });
 
