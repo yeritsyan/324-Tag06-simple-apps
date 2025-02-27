@@ -12,6 +12,6 @@ services:
     repo: https://github.com/yeritsyan/324-Tag06-simple-apps
     plan: free
     region: frankfurt
-    dockerfilePath: backend/Dockerfile
+    dockerfilePath: Dockerfile
     rootDir: backend
 version: "1"
