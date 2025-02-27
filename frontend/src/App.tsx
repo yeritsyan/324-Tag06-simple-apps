@@ -4,10 +4,12 @@ import DataRequest from './components/DataRequest'
 
 
 const App = () => {
+  const apiUrl = process.env.BACKEND_URL || "not-defined-url";
+
   return (
     <>
       <h2>Functional Arror Component</h2>
-      <DataRequest title="API Endpoint A" apiUrl="https://backend-nestjs-o9er.onrender.com/data"/>
+      <DataRequest title="API Endpoint A" apiUrl={apiUrl}/>
     </>
   )
 }

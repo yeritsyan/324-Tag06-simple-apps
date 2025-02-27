@@ -14,7 +14,7 @@ const DataRequest: React.FC<DataRequestProps> = ({ title, apiUrl }) => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiUrl + "/data");
       const data = await response.json();
       setResponseData(JSON.stringify(data, null, 2)); // Pretty print JSON
     } catch (error) {
