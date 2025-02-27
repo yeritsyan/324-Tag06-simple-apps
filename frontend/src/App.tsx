@@ -4,7 +4,9 @@ import DataRequest from './components/DataRequest'
 
 
 const App = () => {
-  const apiUrl = 'https://three24-tag06-simple-apps.onrender.com';
+  const apiUrl = 'https://backend-nestjs-ncjn.onrender.com';
+
+  console.log(process.env.REACT_APP_BACKEND_URL)
 
   return (
     <>
