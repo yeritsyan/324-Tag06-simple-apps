@@ -7,6 +7,11 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'; // Import Swag
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors({
+    origin: ['https://backend-nestjs-o9er.onrender.com/'], // Allow specific domains
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only certain HTTP methods
+  });
+
   const configService = app.get(ConfigService);
 
   const port = configService.get<number>('PORT') || 3001;
